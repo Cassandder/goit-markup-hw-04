@@ -127,10 +127,10 @@ ul {
   padding: 32px 0px;
 }
 
-.contacts-list-item {
+.contacts-item {
   margin-left: 50px;
 }
-.contacts-list-item:first-child {
+.contacts-item:first-child {
   margin-left: 0;
 }
 
@@ -145,6 +145,13 @@ ul {
 }
 .contacts:hover {
   color: var(--accent-color);
+}
+
+.contacts-item-icon {
+  margin-right: 10px;
+}
+.contacts-item:hover .contacts-item-icon {
+  fill: var(--accent-color);
 }
 
 /*============= MAIN =================*/
@@ -376,6 +383,9 @@ ul {
 
   fill: #afb1b8;
 }
+.social-link-type:hover .social-link-icon {
+  fill: #fff;
+}
 .social-link-icon:hover {
   fill: #fff;
 }
@@ -392,32 +402,43 @@ ul {
   margin-bottom: 50px;
 }
 
-.customers {
+.customers-list {
   display: flex;
   list-style: none;
   padding-bottom: 94px;
 }
-.item-client {
+.customers-client {
   margin-left: 30px;
   width: 170px;
   height: 90px;
-}
-.item-client:first-child {
-  margin: 0;
-}
-.icon-logo-style {
-  fill: #afb1b8;
-  width: 170px;
-  height: 90px;
   border: 1px solid #afb1b8;
-  box-sizing: border-box;
   border-radius: 4px;
 }
-.icon-logo-style:hover {
+.customers-client:first-child {
+  margin: 0;
+}
+.customers-client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.customers-client-logo {
+  width: 60%;
+  height: 60%;
+}
+
+.customers-client:hover {
   fill: #2196f3;
   border: 1px solid #2196f3;
   box-sizing: border-box;
   border-radius: 4px;
+}
+.customers-client:hover .customers-client-link {
+  fill: #2196f3;
 }
 
 /*============= footer ==========*/
