@@ -544,16 +544,16 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
 }
 .social-link-footer {
   width: 44px;
   height: 44px;
-  margin-left: 10px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 44px;
 }
-.social-link-footer:first-child {
+.social-item-footer:first-child {
   margin-left: 0;
 }
 .social-link-footer:focus,
