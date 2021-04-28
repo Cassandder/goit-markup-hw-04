@@ -12,11 +12,11 @@ body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   text-decoration: none;
-  /* list-style-type: none;
-  list-style: none; */
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -38,11 +38,14 @@ ul {
 }
 
 .container {
-  display: block;
+  /* display: block; */
   margin: 0 auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+}
+.section {
+  padding: 94px 0px;
 }
 
 /*======== site header ===========*/
@@ -153,7 +156,7 @@ ul {
 
 .contacts-link:focus svg,
 .contacts-link:hover svg {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contacts-item-icon {
@@ -226,21 +229,16 @@ ul {
 
 /*============ features =============*/
 
-.features {
-  padding: 94px 0px;
-}
-
 .list-features {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  margin-left: -30px;
 }
 
 .list-features-item {
   margin-left: 30px;
-}
-
-.list-features-item:first-child {
-  margin-left: 0px;
+  flex-basis: calc((100% - 120px) / 4);
 }
 
 .list-features-item::before {
@@ -284,29 +282,27 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  max-width: 270px;
 }
 
 /*========= occupation ==========*/
-
-.list-occupation {
-  display: flex;
-  list-style-type: none;
-  margin: 0px;
-  padding: 0px 0px 94px 0px;
-}
 
 .occupation-section {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
+.list-occupation {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: -30px;
+}
+
 .list-occupation-item {
   margin-left: 30px;
+  flex-basis: calc((100% / 3) -30px);
 }
-.list-occupation-item:first-child {
-  margin-left: 0px;
-}
+
 .occupation {
   margin: 0px 0px 50px;
   font-weight: bold;
@@ -318,32 +314,27 @@ ul {
 
 /*============= our-team =============*/
 
-.our-team-section {
-  padding: 94px 0px;
+.our-team {
   background: #f5f4fa;
 }
 
-.list-our-team {
+.our-team-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
+  margin-left: -30px;
 }
 
 .our-team-item {
   margin-left: 30px;
   box-sizing: border-box;
-  width: 270;
+  flex-basis: calc((100% / 4) -30px);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background: var(--primary-white-color);
 }
 
-.our-team-item:first-child {
-  margin-left: 0px;
-}
-
-.our-team {
+.our-team-title-main {
   margin: 0px 0px 50px 0px;
   text-align: center;
   font-weight: bold;
@@ -418,18 +409,17 @@ ul {
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
-  padding-top: 94px;
   margin-bottom: 50px;
 }
 
 .customers-list {
   display: flex;
   list-style: none;
-  padding-bottom: 94px;
 }
+
 .customers-item {
+  flex-basis: calc((100% / 6) -30px);
   margin-left: 30px;
-  width: 170px;
   height: 90px;
 }
 
@@ -437,6 +427,7 @@ ul {
   margin: 0;
 }
 .customers-client-link {
+  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,7 +444,7 @@ ul {
 .customers-client-link:focus,
 .customers-client-link:hover {
   fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -462,6 +453,8 @@ ul {
 
 .footer-line {
   display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .bottom-part {
@@ -475,7 +468,6 @@ ul {
 
 .logo-bottom {
   text-align: start;
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -495,34 +487,29 @@ ul {
 }
 
 .list-tooter {
-  margin-bottom: 60px;
-  padding: 0px;
   list-style-type: none;
 }
 
-.list-tooter-item {
+.list-tooter-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
 .link-footer {
-  padding-bottom: 9px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
 }
 .list-tooter:first-child {
   margin-bottom: 9px;
 }
 
 /*======= join ========*/
-.section-join {
+.join {
   margin-left: 70px;
 }
-.join {
-  margin-top: 72px;
-  margin-bottom: 16px;
-}
+
 .join-titel {
   font-weight: bold;
   font-size: 14px;
@@ -575,26 +562,21 @@ ul {
 
 /*=========== portfolio ==============*/
 
-.portfolio-main {
-  padding: 94px 0px;
-}
-
 .portfolio-title {
   color: var(--primary-white-color);
 }
 
 .list-portfolio {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
+  margin-bottom: 30px;
 }
 
-.list-portfolio-bottom {
-  margin-left: 9px;
-}
-
-.list-portfolio-bottom:first-child {
-  margin-left: 0px;
+.item-portfolio-bottom:not(:last-child) {
+  margin-right: 9px;
+  flex-basis: calc((100% / 5) -9px);
 }
 
 .button-portfolio {
@@ -608,41 +590,36 @@ ul {
   color: var(--title-text-color);
   background: #f5f4fa;
   cursor: pointer;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-portfolio:active,
 .button-portfolio:hover {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.list-portfolio-img {
+.list-portfolio-card {
   display: flex;
   flex-wrap: wrap;
-  margin: 34px 0px;
-  padding: 0px;
   list-style-type: none;
+  margin-right: -30px;
+  margin-top: -30px;
 }
 
-.list-portfolio-img-item {
+.list-portfolio-item {
   margin-right: 30px;
   margin-top: 30px;
-  width: 370px;
-  height: 404px;
+  flex-basis: calc((100% - 90px) / 3);
+  /* flex-basis: calc((100% / 3) -30px); */
   background: var(--primary-white-color);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   cursor: pointer;
 }
-.list-portfolio-img-item:nth-child(3n) {
-  margin-right: -30px;
-}
-.list-portfolio-img-item:nth-child(-n + 3) {
-  margin-top: 0;
-}
-.list-portfolio-img-item:hover {
+
+.list-portfolio-item:hover {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -650,7 +627,7 @@ ul {
 }
 
 .portfolio-subtitle {
-  margin: 20px 24px 4px 24px;
+  margin-bottom: 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -658,8 +635,11 @@ ul {
 }
 
 .portfolio-text {
-  margin: 0px 24px 20px 24px;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+}
+
+.subtitle-text {
+  padding: 20px 24px;
 }
