@@ -47,6 +47,14 @@ ul {
 .section {
   padding: 94px 0px;
 }
+.section-title {
+  margin: 0px 0px 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
 
 /*======== site header ===========*/
 .header {
@@ -175,8 +183,8 @@ ul {
 
 .service {
   background-color: #2f303a;
-  min-width: 1600px;
-  min-height: 600px;
+  max-width: 1600px;
+  max-height: 600px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -251,6 +259,7 @@ ul {
   background-position: center;
   background-color: #f5f4fa;
   border-radius: 4px;
+  background-size: 70px;
 }
 .antenna::before {
   background-image: url("../images/antenna.svg");
@@ -276,6 +285,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .text {
@@ -287,8 +297,7 @@ ul {
 /*========= occupation ==========*/
 
 .occupation-section {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 94px;
 }
 
 .list-occupation {
@@ -301,15 +310,6 @@ ul {
 .list-occupation-item {
   margin-left: 30px;
   flex-basis: calc((100% / 3) -30px);
-}
-
-.occupation {
-  margin: 0px 0px 50px;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 /*============= our-team =============*/
@@ -328,19 +328,10 @@ ul {
 .our-team-item {
   margin-left: 30px;
   box-sizing: border-box;
-  flex-basis: calc((100% / 4) -30px);
+  flex-basis: calc((100% / 4) - 30px);
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background: var(--primary-white-color);
-}
-
-.our-team-title-main {
-  margin: 0px 0px 50px 0px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
 }
 
 .our-team-title {
@@ -402,15 +393,6 @@ ul {
 }
 
 /*=========== Regular customers ============*/
-.customers-title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
 
 .customers-list {
   display: flex;
@@ -612,7 +594,7 @@ ul {
   margin-right: 30px;
   margin-top: 30px;
   flex-basis: calc((100% - 90px) / 3);
-  /* flex-basis: calc((100% / 3) -30px); */
+  /* flex-basis: calc((100% / 3) - 30px); */
   background: var(--primary-white-color);
   border: 1px solid #eeeeee;
   box-sizing: border-box;
